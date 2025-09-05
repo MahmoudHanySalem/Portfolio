@@ -1,0 +1,187 @@
+main {
+    margin-top: 7rem;
+    display: grid;
+    place-items: center;
+}
+
+.work-body {
+    width: 89%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bot {
+    margin-bottom: 2rem;
+}
+
+.switch-btn {
+    width: 48px;
+    height: 48px;
+    background-color: #00bba7;
+    border: none;
+    border-radius: 50%;
+    transition: background-color .2s ease-out;
+    display: grid;
+    place-items: center;
+}
+
+.switch-btn svg {
+    width: 24px;
+    height: 24px;
+    color: black;
+}
+
+.switch-btn:hover {
+    background-color: lab(76.0109% -53.3483 -2.27906);
+}
+
+.point {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #354156;
+    transition:
+        width 0.3s ease,
+        height 0.3s ease,
+        background-color 0.3s ease,
+        border-radius 0.3s ease;
+}
+
+.active-point {
+    width: 32px !important;
+    background-color: lab(76.0109% -53.3483 -2.27906) !important;
+    border-radius: 10px;
+}
+
+.top {
+    width: 100%;
+    place-items: center;
+    animation: fadein .3s ease;
+}
+@keyframes fadein {
+    from{
+opacity: 0;
+    transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.top-right {
+    width: 48%;
+    height: 400px;
+}
+
+.top-right img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.top-left {
+    width: 45%;
+}
+
+.project-number {
+    color: color-mix(in oklab, #00d5be 20%, transparent);
+    font-size: 96px;
+    font-weight: bold;
+    line-height: 80px;
+}
+
+.name {
+    color: white;
+    font-weight: bold;
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.role {
+    color: lab(76.0109% -53.3483 -2.27906);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.description {
+    font-size: 16px;
+    color: #d1d5dc;
+    height: 105px;
+    margin-bottom: 2rem;
+}
+
+.tech-head {
+    color: #99a1af;
+    font-size: 14px;
+}
+
+.techs {
+    list-style: none;
+    margin-top: 0.6rem;
+    padding-left: 0;
+}
+
+.tech {
+    color: lab(76.0109% -53.3483 -2.27906);
+    font-size: 14px;
+    padding: 4px 12px;
+    border-radius: 15px;
+    background-color: #1d293d;
+}
+
+.repo-link {
+    width: fit-content;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #00bba7;
+    color: black;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.repo-link svg {
+    margin-left: 5px;
+}
+
+.repo-link:hover {
+    background-color: lab(76.0109% -53.3483 -2.27906);
+}
+
+@media (max-width: 991px) {
+    main {
+        margin-bottom: 2rem;
+    }
+
+    .work-body {
+        width: 95%;
+    }
+
+    .top {
+        width: 100%;
+    }
+
+    .top-left {
+        width: 95%;
+    }
+
+    .top-right {
+        width: 100%;
+        height: 300px;
+    }
+
+    .description {
+        height: auto;
+    }
+
+    .bot {
+        margin-top: 2rem;
+    }
+}

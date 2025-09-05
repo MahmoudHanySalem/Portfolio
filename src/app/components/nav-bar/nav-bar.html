@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+  <div class="cont container-fluid ">
+    <!-- Logo / Brand -->
+    <a class="navbar-brand d-flex align-items-center" routerLink="Home" #Home id="logo-link" (click)="activatePage($event,Home)">
+      <span class="fw-bold text-white me-2">Mahmoud</span>
+      <div class="logo-box">
+        <div>
+            M
+        </div>
+    </div>
+    </a>
+
+    <!-- Mobile Toggle -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center me-3">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="" (click)="activatePage($event)">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="Services" (click)="activatePage($event)">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="Resume" (click)="activatePage($event)">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="Work" (click)="activatePage($event)">Work</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="Contact" (click)="activatePage($event)">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Hire Me Button -->
+      <a class="btn btn-hire px-4" routerLink="Contact" id="hire-me" #contact (click)="activatePage($event,contact)">Hire me</a>
+    </div>
+  </div>
+</nav>

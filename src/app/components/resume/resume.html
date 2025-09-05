@@ -1,0 +1,502 @@
+<main>
+    <div class="resume-body d-flex flex-column flex-lg-row">
+        <div class="sections d-flex flex-column">
+            <button class="section-btn active-section" (click)="switchContent($event,0)">
+                Experience
+            </button>
+            <button class="section-btn" (click)="switchContent($event,1)">
+                Education
+            </button>
+            <button class="section-btn" (click)="switchContent($event,2)">
+                Skills by category
+            </button>
+            <button class="section-btn" (click)="switchContent($event,3)">
+                About Me
+            </button>
+        </div>
+        <div class="content">
+            @if (sectionCode === 0) {
+            <div class="experience-section section">
+                <div class="title">
+                    My Experience
+                </div>
+                <div class="exp-grid d-grid gap-3" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="exp-element ">
+                        <span class="date">June 2025 - Present</span>
+                        <div class="job-title">Fullstack .NET Developer</div>
+                        <span class="company"><span class="dot">•</span> Digital Egyptian Pioneers</span>
+                    </div>
+                    <div class="exp-element">
+                        <span class="date">June 2025 - June 2025</span>
+                        <div class="job-title">Web Developer</div>
+                        <span class="company">
+                            <span class="dot">•</span> Information Technology Institute (ITI)
+                        </span>
+                    </div>
+                    <div class="exp-element">
+                        <span class="date">October 2024 - Present</span>
+                        <div class="job-title">Math AI Trainer</div>
+                        <span class="company">
+                            <span class="dot">•</span> Outlier
+                        </span>
+                    </div>
+                    <div class="exp-element">
+                        <span class="date">August 2025 - Present</span>
+                        <div class="job-title">Fullstack Developer</div>
+                        <span class="company">
+                            <span class="dot">•</span> UpWork, Freelancer.com
+                        </span>
+                    </div>
+                </div>
+            </div>
+            }
+            @else if (sectionCode === 1) {
+            <div class="education-section section">
+                <div class="title">
+                    Education
+                </div>
+                <div class="d-flex flex-column gap-4">
+                    <div class="edu-element d-flex flex-column">
+                        <span class="date">2022 - 2026</span>
+                        <p class="edu-p">
+                            Bachelor of Science in Computer Science
+                        </p>
+                        <span class="company">
+                            <span class="dot">•</span> Alexandria University
+                        </span>
+                    </div>
+                    <div class="edu-element">
+                        <p class="edu-p">
+                            Strong academic foundation in software engineering, algorithms, data structures, databases,
+                            and web technologies.
+                        </p>
+                    </div>
+                    <div class="edu-element">
+                        <p class="edu-p">
+                            Focused on full-stack development with practical projects in Angular, ASP.NET Core,
+                            TypeScript, C#
+                            (.NET Core), MS SQL Server, Bootstrap.
+                        </p>
+                    </div>
+                    <div class="edu-element">
+                        <p class="edu-p">
+                            Consistently ranked among the top students with a GPA of 3.85, demonstrating strong
+                            problem-solving and analytical skills.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            }
+            @else if (sectionCode === 2) {
+            <div class="title">
+                My Skills
+            </div>
+            <div class="skills-section section d-flex flex-column gap-3">
+                <div class="categores d-flex gap-3">
+                    <button class="category-btn active-category" (click)="switchCategory($event,0)">
+                        Frontend
+                    </button>
+                    <button class="category-btn" (click)="switchCategory($event,1)">
+                        Backend
+                    </button>
+                    <button class="category-btn" (click)="switchCategory($event,2)">
+                        Tools
+                    </button>
+                </div>
+                <div class="skills">
+                    <div class="row justify-content-center">
+                        @if(categoryCode ===0){
+                        <div class="col-auto cat-element-cont">
+                            <div class="cat-element">
+                                <div class="skill">
+                                    <img src="assets/skills/html5.svg" alt="html5 icon">
+                                    <p>
+                                        HTML5
+                                    </p>
+                                </div>
+                                <div class="label">
+                                    HTML5
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto cat-element-cont">
+                            <div class="cat-element">
+                                <div class="skill">
+                                    <img src="assets/skills/css3.svg" alt="css3 icon">
+                                    <p>
+                                        CSS
+                                    </p>
+                                </div>
+                                <div class="label">
+                                    CSS
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto cat-element-cont">
+                            <div class="cat-element">
+                                <div class="skill">
+                                    <img src="assets/skills/bootstrap.svg" alt="bootstrap icon">
+                                    <p>
+                                        Bootstrap
+                                    </p>
+                                </div>
+                                <div class="label">
+                                    Bootstrap
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto cat-element-cont">
+                            <div class="cat-element">
+                                <div class="skill">
+                                    <img src="assets/skills/tailwind.svg" alt="tailwind icon">
+                                    <p>
+                                        Tailwind CSS
+                                    </p>
+                                </div>
+                                <div class="label">
+                                    Tailwind CSS
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto cat-element-cont">
+                            <div class="cat-element">
+                                <div class="skill">
+                                    <img src="assets/skills/javascript.svg" alt="javascript icon">
+                                    <p>
+                                        JavaScript
+                                    </p>
+                                </div>
+                                <div class="label">
+                                    JavaScript
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto cat-element-cont">
+                            <div class="cat-element">
+                                <div class="skill">
+                                    <img src="assets/skills/typescript.svg" alt="typescript icon">
+                                    <p>
+                                        TypeScript
+                                    </p>
+                                </div>
+                                <div class="label">
+                                    TypeScript
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto cat-element-cont">
+                            <div class="cat-element">
+                                <div class="skill">
+                                    <img src="assets/skills/4844577.png" alt="Angular icon">
+                                    <p>
+                                        Angular
+                                    </p>
+                                </div>
+                                <div class="label">
+                                    Angular
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto cat-element-cont">
+                            <div class="cat-element">
+                                <div class="skill">
+                                    <img src="assets/skills/communityIcon_ddtmvgjhudsb1.png" alt="Webflow icon">
+                                    <p>
+                                        Webflow
+                                    </p>
+                                </div>
+                                <div class="label">
+                                    Webflow
+                                </div>
+                            </div>
+                        </div>
+
+                        }@else if(categoryCode ===1){
+                        <div class="col-auto cat-element-cont">
+                            <div class="cat-element">
+                                <div class="skill">
+                                    <img src="assets/skills/c-sharp-programming-language-icon.png" alt="C# icon">
+                                    <p>
+                                        C#
+                                    </p>
+                                </div>
+                                <div class="label">
+                                    C#
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto cat-element-cont">
+                            <div class="cat-element">
+                                <div class="skill">
+                                    <img src="assets/skills/ssms.ico" alt="MS SQL Server icon">
+                                    <p>
+                                        MS SQL Server
+                                    </p>
+                                </div>
+                                <div class="label">
+                                    MS SQL Server
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto cat-element-cont">
+                            <div class="cat-element">
+                                <div class="skill">
+                                    <img src="assets/skills/Bitmap-MEDIUM_ASP.NET-Core-MVC-Logo_2colors_Square_Boxed_RGB.png"
+                                        alt="ASP.NET MVC icon">
+                                    <p>
+                                        ASP.NET MVC
+                                    </p>
+                                </div>
+                                <div class="label">
+                                    ASP.NET MVC
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto cat-element-cont">
+                            <div class="cat-element">
+                                <div class="skill">
+                                    <img src="assets/skills/1_rq0nGBPj6yxGDBuZayLyjA.webp" alt=".NET Aspire icon">
+                                    <p>
+                                        .NET Aspire
+                                    </p>
+                                </div>
+                                <div class="label">
+                                    .NET Aspire
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto cat-element-cont">
+                            <div class="cat-element">
+                                <div class="skill">
+                                    <img src="assets/skills/Bitmap-MEDIUM_Entity-Framework-Core-Logo_2colors_Square_Boxed_RGB.png"
+                                        alt="Entity Framework Core icon">
+                                    <p>
+                                        EF Core
+                                    </p>
+                                </div>
+                                <div class="label">
+                                    EF Core
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto cat-element-cont">
+                            <div class="cat-element">
+                                <div class="skill">
+                                    <img src="assets/skills/docker.svg" alt="Docker icon">
+                                    <p>
+                                        Docker
+                                    </p>
+                                </div>
+                                <div class="label">
+                                    Docker
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto cat-element-cont">
+                            <div class="cat-element">
+                                <div class="skill">
+                                    <img src="assets/skills/postgresql-icon.png" alt="PostgreSQL icon">
+                                    <p>
+                                        PostgreSQL
+                                    </p>
+                                </div>
+                                <div class="label">
+                                    PostgreSQL
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto cat-element-cont">
+                            <div class="cat-element">
+                                <div class="skill">
+                                    <img src="assets/skills/1611674.png" alt="Firebase icon">
+                                    <p>
+                                        Firebase
+                                    </p>
+                                </div>
+                                <div class="label">
+                                    Firebase
+                                </div>
+                            </div>
+                        </div>
+
+                        }@else {
+                        <div class="col-auto cat-element-cont">
+                            <div class="cat-element">
+                                <div class="skill">
+                                    <img src="assets/skills/code-stable.png" alt="VS Code icon">
+                                    <p>
+                                        VS Code
+                                    </p>
+                                </div>
+                                <div class="label">
+                                    VS Code
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto cat-element-cont">
+                            <div class="cat-element">
+                                <div class="skill">
+                                    <img src="assets/skills/Visual_Studio_Icon_2022.svg" alt="VS 2022 icon">
+                                    <p>
+                                        VS 2022
+                                    </p>
+                                </div>
+                                <div class="label">
+                                    VS 2022
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto cat-element-cont">
+                            <div class="cat-element">
+                                <div class="skill">
+                                    <img src="assets/skills/git.svg" alt="Git icon">
+                                    <p>
+                                        Git
+                                    </p>
+                                </div>
+                                <div class="label">
+                                    Git
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto cat-element-cont">
+                            <div class="cat-element">
+                                <div class="skill">
+                                    <img src="assets/skills/github.svg" alt="GitHub icon">
+                                    <p>
+                                        GitHub
+                                    </p>
+                                </div>
+                                <div class="label">
+                                    GitHub
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto cat-element-cont">
+                            <div class="cat-element">
+                                <div class="skill">
+                                    <img src="assets/skills/postman.svg" alt="Postman icon">
+                                    <p>
+                                        Postman
+                                    </p>
+                                </div>
+                                <div class="label">
+                                    Postman
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto cat-element-cont">
+                            <div class="cat-element">
+                                <div class="skill">
+                                    <img src="assets/skills/docker.svg" alt="Docker icon">
+                                    <p>
+                                        Docker
+                                    </p>
+                                </div>
+                                <div class="label">
+                                    Docker
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto cat-element-cont">
+                            <div class="cat-element">
+                                <div class="skill">
+                                    <img src="assets/skills/communityIcon_ddtmvgjhudsb1.png" alt="Webflow icon">
+                                    <p>
+                                        Webflow
+                                    </p>
+                                </div>
+                                <div class="label">
+                                    Webflow
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto cat-element-cont">
+                            <div class="cat-element">
+                                <div class="skill">
+                                    <img src="assets/skills/1611674.png" alt="Firebase icon">
+                                    <p>
+                                        Firebase
+                                    </p>
+                                </div>
+                                <div class="label">
+                                    Firebase
+                                </div>
+                            </div>
+                        </div>
+
+                        }
+                    </div>
+                </div>
+            </div>
+            }
+            @else {
+            <div class="about-section section">
+                <div class="title">
+                    About Me
+                </div>
+                <p>
+                    I'm a passionate Full Stack Developer with a strong background in web development and a proven track
+                    record of delivering high-quality, scalable, and efficient web applications. My expertise lies in
+                    building robust and responsive user interfaces using Angular, Bootstrap, and TypeScript, while
+                    ensuring
+                    clean, maintainable, and well-structured codebases. On the backend, I have hands-on experience with
+                    C#
+                    (.NET Core) and MS SQL Server, enabling me to design and implement secure, efficient, and scalable
+                    server-side
+                    solutions. I thrive on bridging
+                    frontend and backend technologies to create seamless digital experiences, always focusing on
+                    performance, maintainability, and scalability.
+                </p>
+                <div class="container my-4" id="info-cont">
+                    <div class="row g-4">
+                        <div class="col-lg-6 col-12">
+                            <div class="info-box">
+                                <span class="info-label">Name</span>
+                                <span class="info-value">Mahmoud</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="info-box">
+                                <span class="info-label">Phone</span>
+                                <span class="info-value">(+20) 120 070 3176</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="info-box">
+                                <span class="info-label">Experience</span>
+                                <span class="info-value">2 Years</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="info-box">
+                                <span class="info-label">Nationality</span>
+                                <span class="info-value">Egyptian</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="info-box">
+                                <span class="info-label">Email</span>
+                                <span class="info-value">mahmoud.bj795@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="info-box">
+                                <span class="info-label">Freelance</span>
+                                <span class="info-value">Available</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="info-box">
+                                <span class="info-label">Language</span>
+                                <span class="info-value">English, Arabic</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</main>

@@ -1,0 +1,69 @@
+/* Navbar background */
+.navbar {
+  padding: 11px 0;
+  width: 100%;
+  background-color: rgba(16, 23, 42, 0.8) !important; 
+  border-bottom: 1px solid #1F283B;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px) !important;
+}
+
+.cont{
+width: 83%;
+margin-left: 163px;
+}
+
+@media (max-width: 991px) {
+  .cont {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* Logo box */
+.logo-box{
+      border: 2px solid #c2a94d; /* gold border */
+}
+.logo-box div{
+  border: 1px solid #c2a94d; /* gold border */
+  padding: 0.1rem 0.4rem;
+  margin: 3px;
+  font-weight: bold;
+  color: #c2a94d;
+  font-size: 1.1rem;
+}
+
+/* Links */
+.nav-link {
+    width: fit-content;
+  color: #ccc !important;
+  padding: 2px 0px !important;
+  margin: 0 1.1rem;
+  font-size: 1.05rem;
+  transition: color 0.2s ease-in-out, border-bottom 0.2s;
+}
+
+.nav-link:hover{
+      color: #4fd1c5 !important;
+}
+.nav-link.active {
+  color: #4fd1c5 !important;
+  border-bottom: 2px solid #4fd1c5;
+}
+
+/* Hire me button */
+.btn-hire {
+  background-color: lab(67.3859% -49.0983 -2.63511);
+  color: #0c1324;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+  margin-left: 16px;
+  padding: 7px 24px;
+}
+
+.btn-hire:hover {
+  background-color: lab(76.0109% -53.3483 -2.27906);
+}

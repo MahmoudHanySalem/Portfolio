@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900; /* variable range */
+  font-style: normal;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #10172A;
+}
+/* Whole scrollbar */
+::-webkit-scrollbar {
+  width: 8px;   /* thickness */
+  height: 10px;  /* for horizontal scrollbar */
+}
+
+/* Track (background) */
+::-webkit-scrollbar-track {
+  background: #1F283B; /* dark background */
+  border-radius: 10px;
+}
+
+/* Thumb (draggable handle) */
+::-webkit-scrollbar-thumb {
+  background-color: #359489; /* teal */
+  border-radius: 10px;
+}
+
+/* Remove scrollbar buttons (arrows) */
+::-webkit-scrollbar-button {
+  display: none;
+}
