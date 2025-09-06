@@ -30,46 +30,13 @@ inputHasError(controlName: string, errorType: string): boolean {
   return control.hasError(errorType) && (control.dirty || control.touched);
 }
   
-  // onSubmit() {
-  //   if (this.contactForm.valid) {
-  //     console.log(this.contactForm.value);
-  //     alert('Form submitted successfully!');
-  //   } else {
-  //     this.contactForm.markAllAsTouched();
-  //   }
-  // }
-
-
-
-
-  private encode(data: Record<string, any>) {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key] ?? ''))
-      .join('&');
-  }
-
   onSubmit() {
-    if (this.contactForm.invalid) {
+    if (this.contactForm.valid) {
+      console.log(this.contactForm.value);
+      alert('Form submitted successfully!');
+    } else {
       this.contactForm.markAllAsTouched();
-      return;
     }
-
-    // build body (must include form-name)
-    const bodyObj = { 'form-name': 'contact', ...this.contactForm.value };
-
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: this.encode(bodyObj)
-    })
-      .then(() => {
-        // success UI (toast, clear form, etc.)
-        alert('Message sent — thank you!');
-        this.contactForm.reset();
-      })
-      .catch(err => {
-        console.error(err);
-        alert('Error sending message. Try again later.');
-      });
   }
+
 }
