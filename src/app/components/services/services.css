@@ -27,6 +27,26 @@ background-color: transparent;
   border-bottom: 1px solid #1f283b;
   padding-bottom: 1.8rem;
   padding-top: 10px;
+    opacity: 0;
+    transform: translateX(-40px);
+    animation: slideRight 0.3s ease-out forwards;
+}
+
+
+
+.custom-accordion .accordion-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.custom-accordion .accordion-item:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+
+@keyframes slideRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .accordion-number {
@@ -80,6 +100,7 @@ background-color: transparent;
   color: #cbd5e1; /* light gray text */
 }
 .accordion-body p{
+    width: 90%;
     padding-bottom: 10px;
 }
 .btn-teal {
@@ -88,3 +109,14 @@ background-color: transparent;
   border-radius: 25px;
   padding: 8px 20px;
 }
+@media (max-width: 991px) {
+    main {
+        margin-bottom: 2rem;
+    }
+    .accordion-body{
+      margin-top: 1rem;
+    }
+    .accordion-body p{
+      width: 100%;
+    }
+  }

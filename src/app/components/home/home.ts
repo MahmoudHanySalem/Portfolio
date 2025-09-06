@@ -1,4 +1,12 @@
-import { Component, OnInit, ElementRef, ViewChild, ChangeDetectorRef, AfterViewInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ElementRef,
+  ViewChild,
+  ChangeDetectorRef,
+  AfterViewInit,
+  HostListener,
+} from '@angular/core';
 
 interface Stat {
   title: string;
@@ -12,8 +20,8 @@ interface Stat {
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home implements OnInit{
- @ViewChild('statsSection', { static: true }) statsSection!: ElementRef;
+export class Home {
+  @ViewChild('statsSection', { static: true }) statsSection!: ElementRef;
   stats: Stat[] = [
     { title: 'Years of Experience', value: 2, current: 0 },
     { title: 'Repositories', value: 12, current: 0 },
@@ -23,9 +31,20 @@ export class Home implements OnInit{
 
   constructor(private cdr: ChangeDetectorRef) {}
 
-  ngOnInit(): void {
-    scrollTo(0,100)
-    this.stats.forEach(stat => this.animateValue(stat, 1000));
+  firstLoad:boolean=true;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollY = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollY >= 100 && this.firstLoad===true) {
+      this.firstLoad=false;
+      this.onReachedScrollPoint();
+    }
+  }
+
+  onReachedScrollPoint() {
+    this.stats.forEach((stat) => this.animateValue(stat, 1000));
   }
 
   animateValue(stat: Stat, duration: number) {

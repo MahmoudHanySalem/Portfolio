@@ -1,0 +1,179 @@
+main {
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.contact-body-cont {
+    width: 80%;
+}
+
+.contact-body {
+    width: 100%;
+}
+
+.contact-head {
+    font-size: 48px;
+    margin-bottom: 48px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.text-in-head {
+    color: lab(76.0109% -53.3483 -2.27906);
+}
+
+.contact-info {
+    width: 47.5%;
+animation: slideLeft 0.7s ease;
+}
+
+.info-item {
+    width: 100%;
+    background-color: color-mix(in oklab, lab(16.132% -.318035 -14.6672) 50%, transparent);
+    border: 1px solid #354156;
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.svg-cont {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: color-mix(in oklab, lab(67.3859% -49.0983 -2.63511) 10%, transparent);
+    display: grid;
+    place-items: center;
+}
+
+.svg-cont svg {
+    color: lab(76.0109% -53.3483 -2.27906);
+    width: 24px;
+    height: 24px;
+}
+
+.info-text {
+    font-weight: bold;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+.info-text span {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 16px;
+    color: lab(85.1236% -.612259 -3.7138);
+}
+
+.form-box {
+    width: 47.5%;
+    animation: slideRight 0.7s ease-out;
+}
+
+.form {
+    width: 100%;
+}
+
+form input,
+select,
+textarea {
+    outline: none;
+    background-color: lab(16.132% -.318035 -14.6672);
+    border: 1px solid #314158;
+    color: #FFFFFF;
+    padding: 12px 16px;
+    border-radius: 7px;
+    transition: border-color 0.2s ease, box-shadow 0.3s ease;
+
+}
+
+form input:focus,
+select:focus,
+textarea:focus {
+    border: 1px solid lab(76.0109% -53.3483 -2.27906) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #8F939C;
+}
+
+select:invalid {
+    color: #9aa0a6;
+    /* placeholder color */
+}
+
+form button {
+    width: 100%;
+    border: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12PX 24PX;
+    border-radius: 25px;
+    background-color: lab(67.3859% -49.0983 -2.63511);
+    margin-top: 0.5rem;
+
+}
+
+form button:hover {
+    background-color: lab(76.0109% -53.3483 -2.27906);
+}
+
+.Error {
+    font-size: 14px;
+    color: red;
+}
+
+.inputError {
+    border-color: red !important;
+}
+
+@media (max-width: 991px) {
+    main {
+        margin-bottom: 2rem;
+    }
+
+    .contact-body-cont {
+        width: 90%;
+    }
+
+    .form-box {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .contact-info {
+        width: 100%;
+    }
+
+    #firstName,
+    #lastName {
+        width: 45%;
+    }
+}
+
+
+@keyframes slideRight {
+    from {
+        opacity: 0.5;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0.5;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

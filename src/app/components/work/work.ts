@@ -1,6 +1,5 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
-import { trigger, transition, style, animate, query, group } from '@angular/animations';
 
 @Component({
   selector: 'app-work',
@@ -46,7 +45,6 @@ export class Work {
   }
   prevProject() {
     this.currentIndex = (this.currentIndex - 1 + this.projects.length) % this.projects.length;
-    
   }
   nextProject() {
     this.currentIndex = (this.currentIndex + 1) % this.projects.length;
