@@ -49,4 +49,6 @@ export class Work {
   nextProject() {
     this.currentIndex = (this.currentIndex + 1) % this.projects.length;
   }
+
+  
 }

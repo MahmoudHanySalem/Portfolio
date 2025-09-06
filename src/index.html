@@ -9,6 +9,21 @@
 </head>
 <body>
   <app-root></app-root>
-  
+  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="display:none;">
+    <input type="hidden" name="form-name" value="contact" />
+    <!-- honeypot field -->
+    <p>
+      <label>Don’t fill this out: <input name="bot-field" /></label>
+    </p>
+
+    <!-- field names must match what your Angular form will send -->
+    <input name="firstName" />
+    <input name="lastName" />
+    <input name="email" />
+    <input name="phone" />
+    <input name="service" />
+    <textarea name="message"></textarea>
+    <button type="submit">Send</button>
+  </form>
 </body>
 </html>
