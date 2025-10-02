@@ -1,6 +1,7 @@
 <main>
     <div class="main-container">
-        <div class="home-body d-flex flex-column-reverse flex-lg-row justify-content-lg-between align-items-lg-center align-content-center">
+        <div
+            class="home-body d-flex flex-column-reverse flex-lg-row justify-content-lg-between align-items-lg-center align-content-center">
             <div class="home-left d-flex flex-column">
                 <span id="job-title">FullStack Web Developer</span>
                 <div id="hello-box">
@@ -8,9 +9,9 @@
                     <span id="Name">Mahmoud</span>
                 </div>
                 <p class="about">
-                    Self-motivated Full Stack Developer with hands-on experience building scalable and efficient web
-                    applications. Proficient in designing APIs, managing databases, and implementing secure, real-time
-                    backend systems — with solid frontend experience using modern JavaScript frameworks.
+                    I help businesses build scalable and efficient web applications using Angular, .NET, and MS SQL
+                    Server. I design APIs, manage databases, and build secure, real-time systems that ensure reliability
+                    and performance. Focusing on delivering solutions that perform at scale.
                 </p>
                 <div class="btns-cont">
                     <a download="assets/Mahmoud Hany.pdf" id="cv-btn" href="assets/Mahmoud Hany.pdf">
@@ -62,9 +63,10 @@
 
         </div>
     </div>
-    <div class="numbers-cont row d-lg-flex flex-lg-row flex-wrap justify-content-lg-between align-items-lg-center align-items-between">
+    <div
+        class="numbers-cont row d-lg-flex flex-lg-row flex-wrap justify-content-lg-between align-items-lg-center align-items-between">
         @for (stat of stats; track $index){
-            <div class="number-box col-lg-1 col-6">
+        <div class="number-box col-lg-1 col-6">
             <div class="number">
                 {{stat.current}}+
             </div>

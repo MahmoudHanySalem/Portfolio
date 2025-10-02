@@ -5,7 +5,7 @@
         </div>
         <div class="contact-body d-flex flex-column flex-lg-row justify-content-between">
             <div class="form-box">
-                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="d-flex flex-column gap-4">
+                <form [formGroup]="contactForm" (ngSubmit)="sendEmail()" class="d-flex flex-column gap-4">
 
                     <div class="d-flex justify-content-between">
                         <div class="d-flex flex-column gap-1" id="firstName">
@@ -49,7 +49,7 @@
                     [ngClass]="{ 'inputError': inputHasError('service', 'required')}">
                         <option value="" selected hidden id="defualt">Select a service</option>
                         @for(service of services;track $index){
-                        <option [value]="services">{{ service }}</option>
+                        <option [value]="service">{{ service }}</option>
                         }
                     </select>
                     @if (inputHasError('service','required')) {

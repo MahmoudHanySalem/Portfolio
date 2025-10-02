@@ -1,6 +1,7 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormGroup, FormControl , Validators, ReactiveFormsModule} from '@angular/forms';
+import emailjs from 'emailjs-com';
 
 @Component({
   selector: 'app-contact',
@@ -39,4 +40,31 @@ inputHasError(controlName: string, errorType: string): boolean {
     }
   }
 
+ sendEmail() {
+    if (this.contactForm.valid) {
+      const formValues = this.contactForm.value;
+
+      emailjs.send(
+        'service_nfpcf5e',   // from EmailJS
+        'template_fm8gfvj',  // from EmailJS 
+        {
+          firstName: formValues.firstName,
+          lastName: formValues.lastName,
+          service:formValues.service,
+          email: formValues.email,
+          message: formValues.message
+        },
+        'kFhWmxl2OPYDWFVqH'    // from EmailJS
+      )
+      .then(() => {
+        alert('Message sent successfully ✅');
+        this.contactForm.reset();
+      })
+      .catch((err) => {
+        alert('❌ Failed to send message: ' + JSON.stringify(err));
+      });
+    } else {
+      alert('Please fill out all required fields.');
+    }
+  }
 }
