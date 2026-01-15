@@ -10,6 +10,15 @@ import { Component } from '@angular/core';
 export class Work {
   projects = [
     {
+      title: 'Furni- e-commerce platform',
+      role: 'Fullstack Developer',
+      description:
+        'A full-stack e-commerce platform built with ASP.NET Core MVC and SQL Server, featuring Stripe payment integration, dynamic product variants, real-time inventory tracking, and complete order management—all wrapped in a responsive, mobile-friendly interface.',
+      technologies: ['ASP.NET Core MVC', 'Entity Framework Core', 'Bootstrap', 'SQL Server'],
+      link: 'https://github.com/nhahub/NHA-040',
+      img: 'assets/Furni.png',
+    },
+    {
       title: 'SHIEN-CLONE',
       role: 'Frontend Developer',
       description:
