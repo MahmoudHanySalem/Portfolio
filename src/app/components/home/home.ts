@@ -23,8 +23,8 @@ interface Stat {
 export class Home {
   @ViewChild('statsSection', { static: true }) statsSection!: ElementRef;
   stats: Stat[] = [
-    { title: 'Years of Experience', value: 2, current: 0 },
-    { title: 'Repositories', value: 12, current: 0 },
+    { title: 'Years of Experience', value: 3, current: 0 },
+    { title: 'Repositories', value: 16, current: 0 },
     { title: 'Technologies Mastered', value: 12, current: 0 },
     { title: 'Side Projects', value: 23, current: 0 },
   ];

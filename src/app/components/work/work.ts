@@ -10,6 +10,15 @@ import { Component } from '@angular/core';
 export class Work {
   projects = [
     {
+      title: 'Artisan Archive — Handmade Marketplace',
+      role: 'UI/UX & Frontend Developer',
+      description:
+        'A bilingual e-commerce and freelance platform connecting Egyptian artisans with buyers, built with Next.js 16 and Laravel 13. Features a product marketplace, custom commission system, real-time chat via WebSockets, social feed, Stripe & PayPal payments, AI chatbot, and full Arabic RTL support—all with a premium, responsive UI powered by shadcn/ui and Tailwind CSS.',
+      technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Laravel'],
+      link: 'https://github.com/MahmoudHanySalem/Artisan-Archive',
+      img: 'assets/demo.mp4',
+    },
+    {
       title: 'Furni- e-commerce platform',
       role: 'Fullstack Developer',
       description:
@@ -52,11 +61,24 @@ export class Work {
   toggleTop() {
     this.showTop = !this.showTop;
   }
+  isVideo(path: string): boolean {
+    return /\.(mp4|webm|ogg|mov)$/i.test(path);
+  }
+
+  animateState = false;
+
+  triggerAnimation() {
+    this.animateState = !this.animateState;
+  }
+
   prevProject() {
     this.currentIndex = (this.currentIndex - 1 + this.projects.length) % this.projects.length;
+    this.triggerAnimation();
   }
+  
   nextProject() {
     this.currentIndex = (this.currentIndex + 1) % this.projects.length;
+    this.triggerAnimation();
   }
 
   
